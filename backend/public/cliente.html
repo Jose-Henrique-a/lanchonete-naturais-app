@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Sabor Natural - Acompanhe seu Pedido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'lanche-primary': '#4CAF50',
+              'lanche-dark': '#388E3C',
+              'lanche-light': '#C8E6C9',
+              'lanche-accent': '#8BC34A',
+              'status-recebido': '#2196F3', // Azul
+              'status-preparo': '#FFC107', // Amarelo
+              'status-pronto': '#4CAF50',  // Verde
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-lanche-primary text-white shadow-lg py-4">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold flex items-center justify-center">
+                <i class="fas fa-leaf mr-3"></i>Lanchonete Sabor Natural
+            </h1>
+        </div>
+    </header>
+
+    <main class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-lanche-dark">Acompanhe o Preparo do seu Lanche!</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Coluna Pedido Recebido -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-status-recebido">
+                    <h3 class="text-xl font-bold mb-4 text-status-recebido flex items-center">
+                        <i class="fas fa-receipt mr-2"></i> Pedido Recebido
+                    </h3>
+                    <div id="pedidosRecebidos" class="space-y-3 min-h-[10rem]">
+                        <p class="text-gray-500 italic">Aguardando pedidos...</p>
+                    </div>
+                </div>
+
+                <!-- Coluna Em Preparo -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-status-preparo">
+                    <h3 class="text-xl font-bold mb-4 text-status-preparo flex items-center">
+                        <i class="fas fa-utensils mr-2"></i> Em Preparo
+                    </h3>
+                    <div id="pedidosEmPreparo" class="space-y-3 min-h-[10rem]">
+                        <p class="text-gray-500 italic">Nenhum lanche em preparo...</p>
+                    </div>
+                </div>
+
+                <!-- Coluna Pronto para Retirada/Entrega -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-status-pronto">
+                    <h3 class="text-xl font-bold mb-4 text-status-pronto flex items-center">
+                        <i class="fas fa-shopping-bag mr-2"></i> Pronto para Retirada/Entrega
+                    </h3>
+                    <div id="pedidosProntos" class="space-y-3 min-h-[10rem]">
+                        <p class="text-gray-500 italic">Nenhum lanche pronto...</p>
+                    </div>
+                </div>
+            </div>
+             <!-- <div class="text-center mt-12">
+                <a href="/admin" class="text-sm text-gray-500 hover:text-lanche-primary">Acesso Administrativo</a>
+            </div> -->
+        </div>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

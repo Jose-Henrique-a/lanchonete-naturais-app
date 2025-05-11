@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Sabor Natural - Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <script>
+      tailwind.config = { /* ... mesmo config de cores do cliente.html ... */
+        theme: {
+          extend: {
+            colors: {
+              'lanche-primary': '#4CAF50',
+              'lanche-dark': '#388E3C',
+              'lanche-light': '#C8E6C9',
+              'lanche-accent': '#8BC34A',
+              'status-recebido': '#2196F3',
+              'status-preparo': '#FFC107',
+              'status-pronto': '#4CAF50',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-lanche-dark text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="text-xl font-semibold">
+                    <i class="fas fa-user-shield mr-2"></i> Admin - Lanchonete Sabor Natural
+                </div>
+                <a href="/cliente" class="px-4 py-2 bg-lanche-primary hover:bg-lanche-accent rounded-lg font-medium text-sm">
+                    <i class="fas fa-eye mr-1"></i> Ver Tela do Cliente
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-2xl font-bold text-center mb-6 text-lanche-dark">Gerenciamento de Pedidos</h1>
+
+            <!-- Formulário para novo pedido -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-lg font-semibold mb-4 text-lanche-primary flex items-center">
+                    <i class="fas fa-plus-circle mr-2"></i> Registrar Novo Pedido
+                </h2>
+                <form id="formNovoPedido" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
+                    <div>
+                        <label for="cliente_nome" class="block text-sm font-medium text-gray-700 mb-1">Nome do Cliente</label>
+                        <input type="text" id="cliente_nome" name="cliente_nome" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-lanche-accent focus:border-lanche-accent">
+                    </div>
+                    <div>
+                        <label for="lanche_descricao" class="block text-sm font-medium text-gray-700 mb-1">Lanche(s) / Itens</label>
+                        <textarea id="lanche_descricao" name="lanche_descricao" rows="2" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-lanche-accent focus:border-lanche-accent"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="observacoes" class="block text-sm font-medium text-gray-700 mb-1">Observações</label>
+                        <input type="text" id="observacoes" name="observacoes" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-lanche-accent focus:border-lanche-accent">
+                    </div>
+                    <!-- Campos opcionais de entrega -->
+                    <div>
+                        <label for="tipo_entrega" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Entrega</label>
+                        <select id="tipo_entrega" name="tipo_entrega" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-lanche-accent focus:border-lanche-accent">
+                            <option value="Retirada" selected>Retirada</option>
+                            <option value="Delivery">Delivery</option>
+                        </select>
+                    </div>
+                    <div id="campo_endereco_entrega" class="hidden"> <!-- Inicialmente oculto -->
+                        <label for="endereco_entrega" class="block text-sm font-medium text-gray-700 mb-1">Endereço de Entrega</label>
+                        <input type="text" id="endereco_entrega" name="endereco_entrega" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-lanche-accent focus:border-lanche-accent">
+                    </div>
+
+                    <div class="md:col-span-2 flex justify-end mt-2">
+                        <button type="submit" class="bg-lanche-primary text-white px-6 py-2 rounded-md hover:bg-lanche-accent transition font-semibold">
+                            <i class="fas fa-plus mr-2"></i> Adicionar Pedido
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Lista de Pedidos Ativos -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <h2 class="text-lg font-semibold p-4 bg-gray-50 border-b text-lanche-dark">Pedidos Ativos</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">ID</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Cliente</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Lanche(s)</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Obs.</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Entrega</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Status</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaPedidosAtivos" class="bg-white divide-y divide-gray-200">
+                            <!-- Linhas de pedidos inseridas por JS -->
+                            <tr><td colspan="7" class="text-center py-10 text-gray-500 italic">Carregando pedidos...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

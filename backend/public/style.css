@@ -1,0 +1,23 @@
+/* backend/public/style.css */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.status-pedido {
+    transition: all 0.3s ease;
+}
+/* Adicionar estilos para a lanchonete, se necessário.
+   Ex: Cores mais verdes, fontes mais leves. */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemplo de fonte */
+}
+.bg-lanche-primary { background-color: #4CAF50; } /* Verde para lanchonete */
+.text-lanche-primary { color: #388E3C; }
+.border-lanche-accent { border-color: #8BC34A; } /* Verde mais claro */
+
+/* Ajustes para os botões de ação na tabela */
+#listaPedidosAtivos td .flex button,
+#listaPedidosAtivos td .flex span {
+    min-width: 2rem; /* Garante que os espaçadores e botões tenham uma largura mínima */
+    text-align: center;
+}

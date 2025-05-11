@@ -1,0 +1,43 @@
+# Arquivo .gitignore para o projeto Lanchonete
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Arquivos de configuração de ambiente local
+# NUNCA versione o arquivo .env que contém segredos!
+# Crie um .env.example para mostrar a estrutura necessária.
+backend/.env
+
+# Dependências do Node.js (instaladas via npm ou yarn)
+backend/node_modules/
+
+# Arquivos de build/distribuição (se você tivesse um processo de build para o frontend)
+# dist/
+# build/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDEs e editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de teste (se você os tiver e não quiser versionar relatórios ou caches)
+# coverage/
+# .nyc_output/
+
+# Outros arquivos temporários ou gerados
+# temp/
+# *.tmp
