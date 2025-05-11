@@ -61,11 +61,11 @@ O banco de dados está hospedado em nuvem.
 ---
 
 <p align="center">
-  <img src="imagens/monitorCliente.png" alt="Monitor Cliente"></a>
+  <img src="imagens/Cliente.png" alt="Monitor Cliente"></a>
 </p>
 
 <p align="center">
-  <img src="imagens/monitorAdmin.png" alt="Monitor Admin"></a>
+  <img src="imagens/Admin.png" alt="Monitor Admin"></a>
 </p>
 
 <p align="center">
