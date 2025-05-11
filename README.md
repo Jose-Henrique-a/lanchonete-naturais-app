@@ -13,7 +13,9 @@ Bem-vindo ao sistema de gerenciamento de pedidos da Lanchonete Sabor Natural! Es
 ---
 
 ## 🚀 Funcionalidades Principais
-
+*   **Comunicação em Tempo Real:** Server-Sent Events (SSE)
+    * O principal desta aplicação é ter dois monitores funcionando simultaneamente:
+        * Exemplo: um para os clientes acompanharem e outro para cozinheiros, chapeiros, boleiros, operadores, etc.
 *   **Visão do Cliente:**
     *   Acompanhamento de pedidos em tempo real nas colunas:
         *   📝 Pedido Recebido
