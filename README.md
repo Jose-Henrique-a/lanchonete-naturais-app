@@ -60,15 +60,14 @@ O banco de dados está hospedado em nuvem.
 
 ---
 
-
 <p align="center">
-  <img src="imagens/monitorCliente.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/monitorCliente.png" alt="Monitor Cliente"></a>
 </p>
 
 <p align="center">
-  <img src="imagens/monitorAdmin.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/monitorAdmin.png" alt="Monitor Admin"></a>
 </p>
 
 <p align="center">
-  <img src="imagens/bancoDados.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/bancoDados.png" alt="DB CRUD"></a>
 </p>
