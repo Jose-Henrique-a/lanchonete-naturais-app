@@ -33,6 +33,7 @@ Bem-vindo ao sistema de gerenciamento de pedidos da Lanchonete Sabor Natural! Es
 
 Este projeto está configurado para deploy contínuo no [Render.com](https://render.com/).
 Qualquer push para a branch `main` no GitHub irá acionar um novo build e deploy.
+O banco de dados está hospedado em nuvem.
 
 **Links para acessar a aplicação:**
 * https://lanchonete-app.onrender.com/admin
@@ -59,16 +60,15 @@ Qualquer push para a branch `main` no GitHub irá acionar um novo build e deploy
 
 ---
 
-💖 Desenvolvido com carinho! 💖
 
 <p align="center">
-  <img src="imagens/monitorCliente.PNG.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/monitorCliente.png" alt="Tela do App CRUD"></a>
 </p>
 
 <p align="center">
-  <img src="imagens/monitorAdmin.PNG.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/monitorAdmin.png" alt="Tela do App CRUD"></a>
 </p>
 
 <p align="center">
-  <img src="imagens/bancoDados.PNG.png" alt="Tela do App CRUD"></a>
+  <img src="imagens/bancoDados.png" alt="Tela do App CRUD"></a>
 </p>
